@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ImageDialog">
+            <rect key="frame" x="1" y="0.0" width="228" height="213"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfe-ef-wMP">
+                    <rect key="frame" x="-18" y="171" width="252" height="30"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeWindow:" destination="iN0-l3-epB" eventType="touchUpInside" id="1Wh-OL-YRU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqi-bF-641">
+                    <rect key="frame" x="-18" y="142" width="252" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8E9-6E-xda"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h18-Fm-uW2">
+                    <rect key="frame" x="68" y="54" width="80" height="80"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Jqi-bF-641" firstAttribute="trailing" secondItem="Jfe-ef-wMP" secondAttribute="trailing" id="2gB-7Z-WXc"/>
+                <constraint firstItem="Jfe-ef-wMP" firstAttribute="top" secondItem="Jqi-bF-641" secondAttribute="bottom" constant="8" symbolic="YES" id="8x8-Ic-xd0"/>
+                <constraint firstItem="h18-Fm-uW2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="68" id="JCM-7R-QZg"/>
+                <constraint firstItem="Jfe-ef-wMP" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" constant="-4" id="JdG-iL-cZd"/>
+                <constraint firstItem="Jqi-bF-641" firstAttribute="top" secondItem="h18-Fm-uW2" secondAttribute="bottom" constant="8" id="OBo-ej-7Wx"/>
+                <constraint firstAttribute="trailing" secondItem="h18-Fm-uW2" secondAttribute="trailing" constant="80" id="Pf0-tK-eOh"/>
+                <constraint firstItem="Jfe-ef-wMP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" constant="14" id="UXY-XQ-EDr"/>
+                <constraint firstItem="Jfe-ef-wMP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="-26" id="Wzj-Bb-MMj"/>
+                <constraint firstItem="h18-Fm-uW2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="46" id="ags-JE-jEd"/>
+                <constraint firstItem="Jqi-bF-641" firstAttribute="leading" secondItem="Jfe-ef-wMP" secondAttribute="leading" id="iH1-B3-bYW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="appImage" destination="h18-Fm-uW2" id="6Pc-dx-FH8"/>
+                <outlet property="imageName" destination="Jqi-bF-641" id="2Er-MZ-UsJ"/>
+                <outlet property="okButton" destination="Jfe-ef-wMP" id="PDD-B7-eKH"/>
+            </connections>
+            <point key="canvasLocation" x="296" y="132.5"/>
+        </view>
+    </objects>
+</document>
